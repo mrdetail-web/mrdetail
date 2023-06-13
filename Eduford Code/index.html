@@ -1,0 +1,469 @@
+<html lang="cs">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+<title>Čištění interiérů Valdice</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <script src="https://kit.fontawesome.com/cc0de33653.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<script type="text/javascript">
+ 
+    window.addEventListener("scroll", function(){
+                            var header = document.querySelector("nav");
+       header.classList.toggle("sticky",window.scrollY > 0);
+    })
+    </script>
+    <section class="header">
+        
+        <nav>
+            <a class="logoWhite" href="index.html"><img src="images/knirtext.png"></a>
+             <a class="logoBlack" href="index.html"><img src="images/knirblack.png"></a>
+            <div class="nav-links" id="navLinks">  
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                  
+                    <p>
+                    <li><a id="barva1" href="index.html">DOMŮ</a></li>
+                      <li><a id="barva2" href="#cenik">CENÍK</a></li>
+                              <li><a id="barva3" href="galery.html" target="_blank">GALERIE</a></li>
+                    <li><a id="barva4" href="#kontakt">KONTAKT</a></li>
+                  
+                        </p>
+                 
+                </ul>
+            </div>
+            <i class="fa fa-bars" id="bars" onclick="showMenu()" action="barva()"></i>
+        </nav>
+       
+        <div class="text-box">
+            <h1 >Čištění interiérů</h1>
+            <p></p>
+            <a href="#form" class="hero-btn">Objednat se</a>
+        </div>
+      
+    </section> 
+    
+<!---------- Služby ----------->
+  
+    <section onclick="hideMenu()" class="sluzby">
+        <div id="cenik">  <!-- scroll -->
+        <h1>Nabídka služeb</h1>
+        </div>
+        <div class="row">
+          
+            <div class="sluzby-col">
+               
+                <h2>Basic</h2>
+                 <div class="cena"> 
+                <h3>500 Kč</h3>
+            </div>
+                <div class="obalTextu">
+                <p> 
+                    <i class="fa-solid fa-check"></i> Vyluxování interiéru (bez kufru)<br>
+                    <i class="fa-solid fa-check"></i> Čištění vnitřních plastů<br>
+                    <i class="fa-solid fa-check"></i> Mytí gumových koberečků<br>
+                    <i class="fa-solid fa-check"></i> Vyluxování textilních koberečků<br>
+                    <i id="basic" class ="fa-regular fa-clock"></i> 2 hodiny
+                </p>
+                </div>
+                <div class="buttonobal" onclick="setSelectValue1()">
+                  <a href="#form" class="tlacitko"><i class="fa fa-shopping-basket"></i>Objednat</a>
+           </div>
+            </div>
+                <div class="sluzby-col" id="rollDown">
+                   
+                <h2>Standard</h2>
+                     <div class="cena">
+                <h3>1000 Kč</h3>
+                    </div>
+                    <div class="obalTextu">
+                <p>
+                    <i class="fa-solid fa-check"></i> Vyluxování interiéru <br>
+                    <i class="fa-solid fa-check"></i> Vyluxování zavazadlového prostoru <br>
+                    <i class="fa-solid fa-check"></i> Čištění vnitřních plastů <br>
+                    <i class="fa-solid fa-check"></i> Ošetření vnitřních plastů <br>
+                    <i class="fa-solid fa-check"></i> Mytí gumových koberečků <br>
+                    <i class="fa-solid fa-check"></i> Tepování textilních koberečků <br>
+                    <i class="fa-solid fa-check"></i> Čištění vnitřních skel <br>
+                    <i class="fa-solid fa-check"></i> Čištění mezidveřních prostorů <br>
+                    <i class="fa-solid fa-check"></i> Navonění interiéru <br>
+                    <i id="Standard" class ="fa-regular fa-clock"></i> 4 hodiny
+                </p>
+                    </div>
+               <div class="buttonobal" id="buttonHidden" onclick="setSelectValue2()"> 
+                  <a href="#form" class="tlacitko"><i class="fa fa-shopping-basket"></i>Objednat</a>
+            </div>     
+            </div>
+            <div class="sluzby-col">
+                
+                <h2>Deluxe</h2>
+                <div class="cena">
+                <h3>2000 Kč</h3>
+            </div>
+                 <div class="obalTextu">
+                <p>
+                   <i class="fa-solid fa-check"></i> Vše, co již obsahuje Standard <br>
+                   <i class="fa-solid fa-check"></i> Tepování sedaček <br>
+                   <i class="fa-solid fa-check"></i> Tepování koberce <br>
+                   <i class="fa-solid fa-check"></i> Čištění kožených sedaček <br>
+                   <i class="fa-solid fa-check"></i> Vyživení / impregnace kůže <br>
+                   <i id="Leather" class ="fa-regular fa-clock"></i> 8 hodin
+                </p>
+                     </div>
+               <div class="buttonobal" onclick="setSelectValue3()"> 
+                  <a href="#form" class="tlacitko"><i class="fa fa-shopping-basket"></i>Objednat</a>
+            </div>
+            </div>
+            </div>      
+    </section>
+ 
+  <!---------- Text ---------->
+   <div class="pruh">
+    <div class="obalPopis" onclick="hideMenu()">
+    <div class="text">
+    <p>• Tyto balíčky obsahují důkladné vyluxování koberců, sedaček a celkové zbavení interiéru všech nečistot a prachu.</p><br>
+    <p>• Poté následuje otření / vyčištění plastových a gumových částí interiéru. Používáme profesionální přípravky, jako je <a href="https://www.vlesku.cz/carpro" target="_blank">CarPro</a> nebo <a href="https://nasucho.cz/" target="_blank">Nasucho</a>.</p><br>
+<p>
+• Tyto přípravky jsou velmi šetrné k povrchům a navíc je v jednom kroku vyčistí, rozjasní jejich barvu a vytvoří ochrannou vrstvu proti UV záření. Na ošetřených místech se také drží mnohem méně prachu, což usnadní příští čištění.
+</p>
+<br>
+    <p>• Gumové i textilní koberečky ručně myjeme a impregnujeme pro lepší odpudivost špíny. Balíček Deluxe navíc obsahuje <a href="galery.html" target="_blank">tepování</a> sedaček a koberců, takže pokud máte flekaté sedačky nebo jen chcete, aby váš interiér byl opět svěží a voňavý, tak neváhejte a objednávejte :)
+
+    </p>    
+    
+    </div>
+    </div>
+       </div>
+    <!---------- Text ---------->
+    
+<!---------- Obrazky ---------->
+    
+    <section class="obrazky" onclick="hideMenu()">
+        
+        <h1 id="nadpis">Ukázka práce</h1>
+        
+<div class="row">
+           
+                <div class="obrazky-col">
+                      <div class="cara"><p>1. Krok</p></div>
+                   <div class="zoom"> <video class="video" autoplay loop muted plays-inline> <source src="images/luxovani.mp4" type="video/mp4"></video></div>
+                    <div class="layer">
+                        <h3>Luxování</h3>
+                    </div>
+                </div>
+                <div class="obrazky-col">
+                     <div class="cara"><p>2. Krok</p></div>
+                   <video class="video" autoplay loop muted plays-inline> <source src="images/luxovani.mp4" type="video/mp4"></video>
+                    <div class="layer">
+                        <h3>Čištění</h3>
+                    </div>
+                </div>
+                <div class="obrazky-col">
+                  
+                     <div class="cara">  <p>3. Krok</p></div>
+                    <video class="video" autoplay loop muted plays-inline> <source src="images/umyvani.mp4" type="video/mp4"></video>
+                    <div class="layer">
+                        
+                        <h3>Mytí</h3>
+                    </div>
+                
+                </div>
+                
+            </div>
+    </section>
+    <!---------- Obrazky ---------->
+<!------- Mapa ------->
+    <h1 id="kontakt">Kontakt</h1>
+<div class="row" >
+    
+    <section class="location" onclick="hideMenu()">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d274.73847559509596!2d15.385338326762108!3d50.45515128952625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e0!4m0!4m3!3m2!1d50.4551745!2d15.385447!5e1!3m2!1sen!2scz!4v1685044696982!5m2!1sen!2scz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+    
+        <!------- Mapa ------->
+     
+
+       
+            
+                <div class="contact-col" onclick="hideMenu()">
+                    <table class="tabulka">
+  <thead>
+    <tr>
+      <th>Sobota & Neděle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>od 9:00</td>
+    </tr>
+  </tbody>
+</table>
+                    <div>
+                        <i class="fa fa-home"></i>
+                        <span>
+                            <h5 id="odsadit">nám. Míru 2, Valdice</h5>
+                            <p></p>
+                        </span>
+                    </div>
+                    <div>
+                        <i class="fa fa-phone"></i>
+                        <span>
+                            <h5>605 020 391</h5>
+                            <p></p>
+                        </span>
+                    </div>
+                    <div >
+                        <i class="fa fa-envelope-o"></i>
+                        <span>
+                            <a href="mailto:misterclean.detailing@gmail.com"><h5 id="e-mail">E-mail</h5> </a>
+                            <p></p>
+                        </span>
+                      </div>
+                    
+                </div>
+    </div>
+          <!-- kome-->  
+    <!-- FORMULAR2 --> 
+             
+        <form id="form" action="contact-form-handler.php" onclick="hideMenu()" method="post">
+            <h1>Rezervace termínu</h1>
+            <div class="input-control">
+                
+                <input id="username" name="username" type="text" placeholder="Jméno" autocomplete="given-name">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+              
+                <input id="email" name="email" type="text" placeholder="E-mail" autocomplete="email">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+              
+                <input id="phone" name="phone" type="tel" placeholder="Telefonní číslo" autocomplete="tel">
+                <div class="error"></div>
+            </div>
+          
+            <div class="input-control">
+            <select name="sluzba" id="sluzba" required>
+   <option value="" disabled="disabled">Vyberte službu</option>
+    <option value="Basic">Basic - 500Kč</option>
+    <option value="Standard">Standard - 1000Kč</option>
+    <option value="Deluxe">Deluxe - 2000Kč</option>
+</select>
+                  <div class="error"></div>
+            </div>
+              <div class="input-control">
+ <input type="date" id="date" name="date" value="den-měsíc-rok" min="2023-01-01" max="2023-12-31">
+                 <div class="error"></div>
+                   </div>
+             <div class="input-control">
+             <input type="time" id="time" name="time" min="09:00" max="18:00">
+                 <div class="error"></div>
+              </div>
+              <div class="input-control">
+                               <input id="password2"name="password2" type="text" placeholder="Poznámky">
+                
+            </div>
+           <button type="submit" class="hero-btn red-btn">Odeslat</button>
+        </form>
+<!-------- footer ---------->
+
+<section class="footer">
+        <h4>Sociální sítě</h4>
+        
+        <div class="icons">
+        <a href="https://www.tiktok.com/@mr.detaii"> <i class="fa-brands fa-tiktok"></i></a> 
+        <i class="fa fa-instagram"></i>
+          <a href="https://www.youtube.com/channel/UCNqZVs1Z92xefASVXcm6W4w"><i class="fa-brands fa-youtube"></i></a> 
+        </div>
+        
+</section>    
+  
+  
+  
+<!----JavaScript menu toggle---->
+   
+<script>
+    var navLinks = document.getElementById("navLinks");
+  var barva1 = document.getElementById("barva1");
+    var barva2 = document.getElementById("barva2");
+    var barva3 = document.getElementById("barva3");
+      var barva4 = document.getElementById("barva4");
+    
+    function showMenu() {
+        navLinks.style.right = "0";
+        barva1.style.color = "black";
+           barva2.style.color = "black";
+           barva3.style.color = "black";
+        barva4.style.color = "black";
+    }
+
+        
+    function hideMenu() { 
+        navLinks.style.right = "-200px";   
+        barva1.style.color = "#fff";
+           barva2.style.color = "#fff";
+           barva3.style.color = "#fff";
+         barva4.style.color = "#fff";
+    }
+   
+</script> 
+     <!----JavaScript menu toggle---->
+<script>
+   
+    //VALIDACE FORMULARE 
+    
+const form = document.getElementById('form');
+const username = document.getElementById('username');
+const email = document.getElementById('email');
+const password = document.getElementById('phone');
+const password2 = document.getElementById('password2');
+const sluzba = document.getElementById('sluzba');
+const date = document.getElementById("date");
+const time = document.getElementById("time");
+let regex = /^[\d,\s,\+,\-]{5,20}/;
+    var soucetKontrola = 0;
+        
+form.addEventListener('submit', e => {
+    
+      e.preventDefault();
+
+    validateInputs();
+
+
+  
+ 
+});
+
+const setError = (element, message) => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = message;
+    inputControl.classList.add('error');
+    inputControl.classList.remove('success');
+}
+
+const setSuccess = element => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = '';
+    inputControl.classList.add('success');
+    inputControl.classList.remove('error');
+};
+
+const isValidEmail = email => {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+const validateInputs = () => {
+    const usernameValue = username.value.trim();
+    const emailValue = email.value.trim();
+    const passwordValue = password.value.trim();
+    const password2Value = password2.value.trim();
+    const sluzbaValue = sluzba.value.trim();
+    const dateValue = date.value.trim();
+    const timeValue = time.value.trim();
+var pocetok = 0;
+    if(usernameValue === '') {
+        setError(username, 'Zadejte jméno');
+    } else {
+        setSuccess(username);
+        pocetok++;
+    }
+
+    if(emailValue === '') {
+        setError(email, 'Zadejte e-mail');
+    } else if (!isValidEmail(emailValue)) {
+        setError(email, 'Zadali jste špatný e-mail');
+    } else {
+        setSuccess(email);
+       pocetok++;
+    }
+
+     if(passwordValue === '') {
+        setError(password, 'Zadejte telefonní číslo');
+    } else if (passwordValue.length >=9 && passwordValue.length < 16) 
+    {
+        if(passwordValue.match(regex)){
+            setSuccess(password);
+             pocetok++;
+        }
+    }
+        else{
+    setError(password, 'Zadali jste špatné telefonní číslo')
+        }
+    if(sluzba.nodeValue === 'Vyberte službu'){
+        setError(sluzba, 'Vyberte službu');
+    } else{
+        setSuccess(sluzba);
+     pocetok++;
+    }
+    
+   var selectedDate = date.value;
+   var minDate = date.min;
+   var maxDate = date.max;
+    
+     if (selectedDate >= minDate && selectedDate <= maxDate) {
+ setSuccess(date);
+        pocetok++;
+  } else {
+    setError(date,"Vyberte datum od " + minDate + " do " + maxDate);
+  }
+ 
+  var selectedTime = time.value;
+  var minTime = time.min;
+  var maxTime = time.max;
+  
+  if (selectedTime >= minTime && selectedTime <= maxTime) {
+   setSuccess(time,"yes");
+     pocetok++;
+  } else {
+  setError(time, "Zadejte čas mezi " + minTime + " a " + maxTime);
+  }
+if(pocetok==6){
+    document.getElementById("form").submit();
+    alert("Formulář se úspěšně odeslal.")
+}
+  
+};    
+//VALIDACE FORMULARE 
+    
+//SELECT VALUE FORMULARE 
+     var select = document.getElementById("sluzba");
+    
+    function setSelectValue2(){
+           
+        select.value = "Standard";
+    }
+    
+    function setSelectValue1(){
+        
+        select.value = "Basic";
+    }
+    
+    function setSelectValue3(){
+        select.value = "Deluxe";
+    }
+</script> 
+    <form action="contact-handler2.php" method="post">
+    <input name="name" id="name" placeholder="name" type="text">
+        <input name="email" id="email" placeholder="email" type="text">
+        <input name="phone" id="phone" placeholder="phone" type="tel">
+    <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+
+
+
+
+
+
+
